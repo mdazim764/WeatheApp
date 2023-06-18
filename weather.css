@@ -175,25 +175,7 @@ main{
     grid-template-columns: repeat(6,1fr);
     margin: 50px 0px;
 }
-/* .cast-header{
-    color: aliceblue;
-    background: rgba(254, 189, 132, 0.539);
-    width: max-content;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 18px;
-    margin-bottom: 5px;
-} */
-/* .divider1,.divider2{
-    background: rgba(254, 189, 132, 0.539);
-    height: 200px;
-    border-radius: 5px;
-}
-.divider2{
-    height: 5px;
-    width: 30%;
-    margin: 0 auto;
-} */
+
 .btn {
     background-color: transparent;
     border: none;
@@ -323,7 +305,7 @@ display: block;
 .footer-menu ul{
   display: flex;
   margin-top: 10px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 }
 
