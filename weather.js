@@ -38,7 +38,7 @@ loactionBtn.addEventListener("click", () => {
 function onSuccess(position) {
 console.log(position);
 const { latitude, longitude } = position.coords;
-api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&` + `lon=${longitude}&appid=${apikey}`;
+api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&` + `lon=${longitude}&appid=${apikey}`;
 fetchData();
 }
 
@@ -63,7 +63,7 @@ function searchByCity(){
     if(place==""){
         alert("enter city name!!!");
     }else{
-    var urlsearch= `http://api.openweathermap.org/data/2.5/weather?q=${place}&` + `appid=${apikey}`;
+    var urlsearch= `https://api.openweathermap.org/data/2.5/weather?q=${place}&` + `appid=${apikey}`;
 
     fetch(urlsearch).then((res)=>{
         return res.json();
@@ -77,7 +77,7 @@ function searchByCity(){
 
 function weatherReport(data){
 
-    var urlcast= `http://api.openweathermap.org/data/2.5/forecast?q=${data.name}&` + `appid=${apikey}`;
+    var urlcast= `https://api.openweathermap.org/data/2.5/forecast?q=${data.name}&` + `appid=${apikey}`;
    
     fetch(urlcast).then((res)=>{
         return res.json();
@@ -97,7 +97,7 @@ function weatherReport(data){
         console.log(data.weather[0].description)
         
         let icon1= data.weather[0].icon;
-        let iconurl= `http://openweathermap.org/img/wn/${icon1}@2x.png`;
+        let iconurl= `https://openweathermap.org/img/wn/${icon1}@2x.png`;
         document.getElementById('img').src=iconurl
     })
     const { humidity, pressure, temp_max, temp_min } = data.main, visibility = data.visibility, speed = data.wind.speed;
@@ -168,7 +168,7 @@ function dayForecast(forecast){
         div.appendChild(temp)
 
         let icon1= forecast.list[i].weather[0].icon;
-        let iconurl= `http://openweathermap.org/img/wn/${icon1}@2x.png`;
+        let iconurl= `https://openweathermap.org/img/wn/${icon1}@2x.png`;
         let img1= document.createElement('img');
         console.log(iconurl);
         img1.src=iconurl;
